@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://trhol0eige7k"]
+
+[node name="Pink" type="CharacterBody3D" unique_id=1700388300]
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1360059412]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Node3D" unique_id=646745088]
+transform = Transform3D(1, 0, 0, 0, 0.3562398, 0, 0, 0, 1, 0, 0, 0)
+sides = 18
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Node3D/CSGCylinder3D" unique_id=2068647556]
+transform = Transform3D(0.9, 0, 0, 0, 0.90107846, 0, 0, 0, 0.9, 0, -0.25471598, 0)
+operation = 2
+sides = 20
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Node3D" unique_id=430520488]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2886607, 0)
+radial_segments = 30
+rings = 9
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Node3D" unique_id=2060762841]
+transform = Transform3D(-1.7221833e-08, 0.07091812, -0.034540553, -0.4, -3.1472198e-09, 0, -3.0196312e-09, 0.012434598, 0.1969948, 0.46142706, -0.35521746, 0.081564195)
+radius = 0.421875
+height = 0.6561279
+sides = 11
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Node3D" unique_id=1223070384]
+transform = Transform3D(-1.7218923e-08, 0.07090614, 0.03472963, -0.39999995, -3.1472192e-09, 0, 3.0361609e-09, -0.012502666, 0.1969615, 0.46275863, -0.35521746, -0.074763075)
+radius = 0.421875
+height = 0.63381577
+sides = 11
