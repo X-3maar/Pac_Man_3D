@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://cw0xdqkuguu7m" path="res://Assets/BlackOpsOne-Regular.ttf" id="3_21xkr"]
 [ext_resource type="PackedScene" uid="uid://b4wbgda8f1edv" path="res://Scenes/point.tscn" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://de3mkxce38jw1" path="res://Scenes/rage.tscn" id="6_6bp64"]
+[ext_resource type="PackedScene" uid="uid://p8r0jnf5qhx" path="res://Scenes/portal.tscn" id="7_6bp64"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jjgbg"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -2340,3 +2341,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 1, 9)
 
 [node name="Rage4" parent="." unique_id=2080378935 instance=ExtResource("6_6bp64")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 1, 9)
+
+[node name="Gate" parent="." unique_id=846527004 instance=ExtResource("7_6bp64")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.5, 1, 0)
+
+[node name="Gate2" parent="." unique_id=2119145586 instance=ExtResource("7_6bp64")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -14.5, 1, 0)
