@@ -1,3 +1,152 @@
 [gd_scene format=3 uid="uid://yal2aumhemew"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u4yt8"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_1rerr"]
+sky_material = SubResource("ProceduralSkyMaterial_u4yt8")
+
+[sub_resource type="Environment" id="Environment_xhh6f"]
+background_mode = 2
+sky = SubResource("Sky_1rerr")
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4yt8"]
+albedo_color = Color(2.234, 2.234, 0, 1)
+metallic = 1.0
+roughness = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1rerr"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhh6f"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cayip"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_158mb"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+roughness = 0.0
+
+[sub_resource type="TextMesh" id="TextMesh_wwsa2"]
+text = "3D"
+font_size = 32
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jsrd8"]
+albedo_color = Color(6.840123, 0, 0, 1)
+roughness = 0.0
+
+[sub_resource type="TextMesh" id="TextMesh_u4yt8"]
+text = "PAC   MAN"
+font_size = 127
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wwsa2"]
+albedo_color = Color(0, 0, 3.43, 1)
+roughness = 0.0
+
+[sub_resource type="Animation" id="Animation_wbdvm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGSphere3D/CSGPolygon3D:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(0, 0, 0.6943513, 1.2375555, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_q3rjx"]
+resource_name = "play"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGSphere3D/CSGPolygon3D:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [PackedVector2Array(0, 0, 0.6943513, 1.2375555, 1, 0), PackedVector2Array(0.41102573, -0.066319466, 0.6943513, 1.2375555, 0.44885498, -0.088650584)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6swd7"]
+_data = {
+&"RESET": SubResource("Animation_wbdvm"),
+&"play": SubResource("Animation_q3rjx")
+}
+
 [node name="Menu" type="Node3D" unique_id=1229475126]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1616483322]
+environment = SubResource("Environment_xhh6f")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=76717559]
+transform = Transform3D(0.5602763, 0.015166311, 0.8281669, 0.09669388, 0.9917987, -0.08357885, -0.82264245, 0.12690592, 0.55421495, 0, 0, 0)
+radial_segments = 30
+rings = 30
+material = SubResource("StandardMaterial3D_u4yt8")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGSphere3D" unique_id=2043058436]
+transform = Transform3D(0.17677668, -0.1767767, 0, 0.1767767, 0.17677668, 0, 0, 0, 0.25, -0.31455174, 0.32922158, 0)
+height = 0.36437988
+sides = 16
+material = SubResource("StandardMaterial3D_1rerr")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="CSGSphere3D/CSGCylinder3D" unique_id=1815423499]
+transform = Transform3D(0.8433335, 0.42083398, 0.33419636, -0.49813846, 0.37887296, 0.7799441, 0.2016092, -0.8242293, 0.5291499, 0.143507, 0.13982081, -0.079877794)
+operation = 2
+polygon = PackedVector2Array(-0.86854106, 0.12165314, -0.33189362, 0.743429, -0.14199275, -0.08289069)
+material = SubResource("StandardMaterial3D_xhh6f")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGSphere3D" unique_id=592089766]
+transform = Transform3D(-0.1958775, -0.046209693, -0.14831272, -0.12609518, 0.18670078, 0.108364366, 0.09073053, 0.15971053, -0.16958918, -0.07278784, 0.32922158, 0.3067523)
+height = 0.36437988
+sides = 16
+material = SubResource("StandardMaterial3D_1rerr")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="CSGSphere3D/CSGCylinder3D2" unique_id=590767956]
+transform = Transform3D(0.8433335, 0.42083398, 0.33419606, -0.4981385, 0.37887302, 0.77994424, 0.20160915, -0.82422924, 0.52914995, 0.143507, 0.13982081, -0.079877794)
+operation = 2
+polygon = PackedVector2Array(-0.86854106, 0.12165314, -0.33189362, 0.743429, -0.14199275, -0.08289069)
+material = SubResource("StandardMaterial3D_cayip")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="CSGSphere3D" unique_id=461836596]
+transform = Transform3D(0.16683738, 0.73168355, 0.6609121, -0.97092104, 0.2386377, -0.019096782, -0.17169136, -0.63850737, 0.7502203, -0.6525402, 0.46065503, 1.2464811)
+operation = 2
+polygon = PackedVector2Array(0, 0, 0.6943513, 1.2375555, 1, 0)
+material = SubResource("StandardMaterial3D_158mb")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="CSGSphere3D" unique_id=1771603782]
+transform = Transform3D(0.6539357, 0.13828571, -0.7438044, 0, 0.98315287, 0.18278462, 0.7565501, -0.1195294, 0.6429188, -0.24345154, 0.056740128, 0.2104311)
+mesh = SubResource("TextMesh_wwsa2")
+material = SubResource("StandardMaterial3D_jsrd8")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="." unique_id=1207888736]
+transform = Transform3D(1, 0, 0, 0, 0.97202665, 0.23487067, 0, -0.23487067, 0.97202665, 0.29689062, 0.015146926, -0.027935177)
+mesh = SubResource("TextMesh_u4yt8")
+material = SubResource("StandardMaterial3D_wwsa2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2076810059]
+libraries/ = SubResource("AnimationLibrary_6swd7")
+autoplay = &"play"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=447406583]
+transform = Transform3D(1, 0, 0, 0, 0.9580679, 0.28654128, 0, -0.28654128, 0.9580679, 0.33494377, 0.2879299, 2.5818286)

@@ -111,7 +111,7 @@ polygon = PackedVector2Array(-0.86854106, 0.12165314, -0.33189362, 0.743429, -0.
 material = SubResource("StandardMaterial3D_6t5aa")
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="CSGSphere3D" unique_id=668058286]
-transform = Transform3D(0.15045992, 0.67031217, 0.72666603, -0.9709209, 0.23863769, -0.019096782, -0.18621068, -0.70266193, 0.6867254, -0.57182354, 0.46065503, 1.3398633)
+transform = Transform3D(0.16737592, 0.7336858, 0.65855193, -0.97092104, 0.23863772, -0.019096792, -0.17116635, -0.63620555, 0.75229293, -0.66652834, 0.46065503, 1.2302976)
 operation = 2
 polygon = PackedVector2Array(0, 0, 0.6943513, 1.2375555, 1, 0)
 material = SubResource("StandardMaterial3D_vgqql")
