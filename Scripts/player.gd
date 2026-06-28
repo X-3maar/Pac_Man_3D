@@ -8,17 +8,16 @@ var move_left = false
 var move_right = false
 var move_up = false
 var move_down = false
+@onready var camera_3d: Camera3D = $Camera3D
 func _physics_process(delta: float) -> void:
-
-
-	if Input.is_action_just_pressed("move_left") and !move_right:
+	if Input.is_action_just_pressed("move_left"):
 		move_left = true
 		move_up = false
 		move_down = false
 		move_right = false
 		velocity.z= 0
 		turning.play()
-	if Input.is_action_just_pressed("move_right") and !move_left:
+	if Input.is_action_just_pressed("move_right"):
 		velocity.z = 0
 		move_right = true
 		move_left = false
@@ -28,7 +27,7 @@ func _physics_process(delta: float) -> void:
 		turning.play()
 		await turning.finished
 		moving.play()
-	if Input.is_action_just_pressed("move_up") and !move_down:
+	if Input.is_action_just_pressed("move_up"):
 		velocity.x = 0
 		move_up = true
 		move_left = false
@@ -38,7 +37,7 @@ func _physics_process(delta: float) -> void:
 		turning.play()
 		await turning.finished
 		moving.play()
-	if Input.is_action_just_pressed("move_down") and !move_up:
+	if Input.is_action_just_pressed("move_down"):
 		move_down = true
 		move_left = false
 		move_right = false

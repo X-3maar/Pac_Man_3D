@@ -44,6 +44,9 @@ tracks/0/keys = {
 "values": [PackedVector2Array(0, 0, 0.6943513, 1.2375555, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_6t5aa"]
+resource_name = "death"
+
 [sub_resource type="Animation" id="Animation_v0iea"]
 resource_name = "mouth"
 length = 0.3
@@ -64,6 +67,7 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cvnsp"]
 _data = {
 &"RESET": SubResource("Animation_cvnsp"),
+&"death": SubResource("Animation_6t5aa"),
 &"mouth": SubResource("Animation_v0iea")
 }
 
@@ -126,3 +130,6 @@ autoplay = true
 
 [node name="Turning" type="AudioStreamPlayer" parent="." unique_id=232922686]
 stream = SubResource("AudioStreamMP3_cvnsp")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1528000237]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 21.155, 0)

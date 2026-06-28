@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Pac_Man_3D"
-run/main_scene="uid://bssh6r45f3kdc"
+run/main_scene="uid://yal2aumhemew"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

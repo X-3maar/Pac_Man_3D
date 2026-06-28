@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://yal2aumhemew"]
 
+[ext_resource type="FontFile" uid="uid://cw0xdqkuguu7m" path="res://Assets/BlackOpsOne-Regular.ttf" id="1_1rerr"]
+[ext_resource type="Script" uid="uid://dr64s2ubkyyjt" path="res://Scripts/menu.gd" id="1_xhh6f"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u4yt8"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -70,10 +73,34 @@ tracks/0/keys = {
 "update": 0,
 "values": [PackedVector2Array(0, 0, 0.6943513, 1.2375555, 1, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/ColorRect:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_q3rjx"]
 resource_name = "play"
-length = 0.5
+length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -86,6 +113,30 @@ tracks/0/keys = {
 "update": 0,
 "values": [PackedVector2Array(0, 0, 0.6943513, 1.2375555, 1, 0), PackedVector2Array(0.41102573, -0.066319466, 0.6943513, 1.2375555, 0.44885498, -0.088650584)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6swd7"]
 _data = {
@@ -93,7 +144,35 @@ _data = {
 &"play": SubResource("Animation_q3rjx")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rerr"]
+bg_color = Color(0, 0, 0, 0.5294118)
+border_width_left = 40
+border_width_top = 40
+border_width_right = 40
+border_width_bottom = 40
+border_color = Color(0, 0, 1, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhh6f"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 40
+border_width_top = 40
+border_width_right = 40
+border_width_bottom = 40
+border_color = Color(0, 0, 1, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cayip"]
+bg_color = Color(0, 0, 0.6156863, 0.4392157)
+border_width_left = 40
+border_width_top = 40
+border_width_right = 40
+border_width_bottom = 40
+border_color = Color(0, 0, 1, 1)
+border_blend = true
+
 [node name="Menu" type="Node3D" unique_id=1229475126]
+script = ExtResource("1_xhh6f")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1616483322]
 environment = SubResource("Environment_xhh6f")
@@ -146,7 +225,49 @@ material = SubResource("StandardMaterial3D_wwsa2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2076810059]
 libraries/ = SubResource("AnimationLibrary_6swd7")
-autoplay = &"play"
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=447406583]
 transform = Transform3D(1, 0, 0, 0, 0.9580679, 0.28654128, 0, -0.28654128, 0.9580679, 0.33494377, 0.2879299, 2.5818286)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=522530654]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=470840141]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -296.0
+offset_top = -252.0
+offset_right = 296.0
+offset_bottom = -73.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1rerr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xhh6f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cayip")
+
+[node name="Label" type="Label" parent="CanvasLayer/Button" unique_id=1216666769]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.0
+offset_top = -64.0
+offset_right = 119.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1rerr")
+theme_override_font_sizes/font_size = 100
+text = "Play"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1712731261]
+visible = false
+offset_right = 1168.0
+offset_bottom = 662.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

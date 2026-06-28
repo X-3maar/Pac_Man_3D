@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://beg7vh00ervue"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y18ax"]
+albedo_color = Color(0, 2.6381168, 10.441425, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xsjyq"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+roughness = 0.0
+
+[node name="Tile" type="CSGBox3D" unique_id=460691535]
+material = SubResource("StandardMaterial3D_y18ax")
+
+[node name="Top" type="CSGBox3D" parent="." unique_id=1702177585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5505829, 0)
+size = Vector3(1, 0.119659424, 1)
+material = SubResource("StandardMaterial3D_xsjyq")
