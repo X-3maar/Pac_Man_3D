@@ -8,7 +8,8 @@ var move_left = false
 var move_right = false
 var move_up = false
 var move_down = false
-@onready var camera_3d: Camera3D = $Camera3D
+var canright = true
+var canleft = true
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("move_left"):
 		move_left = true
@@ -61,3 +62,18 @@ func _physics_process(delta: float) -> void:
 		velocity.x = SPEED 
 		rotation.y = rotate_toward(rotation.y,deg_to_rad(90), 20)
 	move_and_slide()
+
+
+func _on_checker_body_entered(body: Node3D) -> void:
+	canright = false
+
+
+func _on_checker_body_exited(body: Node3D) -> void:
+	canright = true
+
+
+func _on_checker_2_body_entered(body: Node3D) -> void:
+	canleft = false
+
+func _on_checker_2_body_exited(body: Node3D) -> void:
+	canleft = true

@@ -20,510 +20,709 @@ fog_light_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjgbg"]
 albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+roughness = 0.0
 
 [node name="Main" type="Node3D" unique_id=1229475126]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=545038867]
 environment = SubResource("Environment_8gbba")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1214373288]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25000003, 2.7805946e-08, 0.49999994, 0.86602545, -0.50000006, 0.75, -0.4330126, -0.9932976, -0.08615112, 0)
-shadow_enabled = true
-
 [node name="Ground" type="CSGBox3D" parent="." unique_id=834121103]
-transform = Transform3D(-1.2239188e-06, 0, -36, 0, 1, 0, 28.000004, 0, -1.5736101e-06, 0, 0, 0)
+transform = Transform3D(28, 0, 4.0196421e-13, 0, 1, 0, -3.4106054e-13, 0, 33, 0, 0, 1)
 use_collision = true
 size = Vector3(1.072731, 1, 1)
 material = SubResource("StandardMaterial3D_jjgbg")
 
-[node name="Node3D" type="Node3D" parent="." unique_id=369906806]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+[node name="Tilemap" type="Node3D" parent="." unique_id=369906806]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 3.5)
 
-[node name="Tile" parent="Node3D" unique_id=460691535 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 0.5)
-
-[node name="Tile16" parent="Node3D" unique_id=1385455867 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -0.5)
-
-[node name="Tile17" parent="Node3D" unique_id=2044901697 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -1.5)
-
-[node name="Tile18" parent="Node3D" unique_id=2023419306 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -2.5)
-
-[node name="Tile19" parent="Node3D" unique_id=610489325 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -3.5)
-
-[node name="Tile20" parent="Node3D" unique_id=807483625 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -4.5)
-
-[node name="Tile21" parent="Node3D" unique_id=1026137088 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -5.5)
-
-[node name="Tile22" parent="Node3D" unique_id=279175810 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -6.5)
-
-[node name="Tile23" parent="Node3D" unique_id=803247545 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -7.5)
-
-[node name="Tile24" parent="Node3D" unique_id=331212451 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -8.5)
-
-[node name="Tile25" parent="Node3D" unique_id=1476871569 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -9.5)
-
-[node name="Tile26" parent="Node3D" unique_id=433442663 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -10.5)
-
-[node name="Tile27" parent="Node3D" unique_id=448343630 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -11.5)
-
-[node name="Tile28" parent="Node3D" unique_id=1967342296 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -13.5)
-
-[node name="Tile29" parent="Node3D" unique_id=1110320456 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -12.5)
-
-[node name="Tile30" parent="Node3D" unique_id=293316065 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -14.5)
-
-[node name="Tile32" parent="Node3D" unique_id=1741872551 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 16.5, 1, -14.5)
-
-[node name="Tile33" parent="Node3D" unique_id=2055152821 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, -14.5)
-
-[node name="Tile34" parent="Node3D" unique_id=968327887 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 14.5, 1, -14.5)
-
-[node name="Tile35" parent="Node3D" unique_id=98122168 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, -14.5)
-
-[node name="Tile36" parent="Node3D" unique_id=1107626070 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 12.5, 1, -14.5)
-
-[node name="Tile37" parent="Node3D" unique_id=822721048 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 11.5, 1, -14.5)
-
-[node name="Tile38" parent="Node3D" unique_id=2060134490 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 10.5, 1, -14.5)
-
-[node name="Tile39" parent="Node3D" unique_id=1455151441 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 9.5, 1, -14.5)
-
-[node name="Tile40" parent="Node3D" unique_id=551700588 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, -14.5)
-
-[node name="Tile41" parent="Node3D" unique_id=354635711 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, -13.5)
-
-[node name="Tile42" parent="Node3D" unique_id=1183501653 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, -12.5)
-
-[node name="Tile43" parent="Node3D" unique_id=1326583136 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, -11.5)
-
-[node name="Tile44" parent="Node3D" unique_id=1938288317 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, -10.5)
-
-[node name="Tile45" parent="Node3D" unique_id=1370147492 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, -9.5)
-
-[node name="Tile46" parent="Node3D" unique_id=307886283 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 7.5, 1, -9.5)
-
-[node name="Tile47" parent="Node3D" unique_id=352192107 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 6.5, 1, -9.5)
-
-[node name="Tile48" parent="Node3D" unique_id=1553349478 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, -9.5)
-
-[node name="Tile49" parent="Node3D" unique_id=704334267 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 5.5, 1, -9.5)
-
-[node name="Tile50" parent="Node3D" unique_id=1515743543 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, -10.5)
-
-[node name="Tile51" parent="Node3D" unique_id=825014469 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, -11.5)
-
-[node name="Tile52" parent="Node3D" unique_id=957662236 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, -12.5)
-
-[node name="Tile53" parent="Node3D" unique_id=362529452 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, -14.5)
-
-[node name="Tile55" parent="Node3D" unique_id=1917722705 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, -14.5)
-
-[node name="Tile56" parent="Node3D" unique_id=1344731012 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, -13.5)
-
-[node name="Tile57" parent="Node3D" unique_id=1086632303 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, -12.5)
-
-[node name="Tile58" parent="Node3D" unique_id=462049218 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, -11.5)
-
-[node name="Tile59" parent="Node3D" unique_id=1565130210 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, -10.5)
-
-[node name="Tile60" parent="Node3D" unique_id=1079258730 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, -9.5)
-
-[node name="Tile61" parent="Node3D" unique_id=19266128 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 1.5, 1, -9.5)
-
-[node name="Tile62" parent="Node3D" unique_id=419636965 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 0.5, 1, -9.5)
-
-[node name="Tile63" parent="Node3D" unique_id=1758479796 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -0.5, 1, -9.5)
-
-[node name="Tile64" parent="Node3D" unique_id=221918238 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, -9.5)
-
-[node name="Tile65" parent="Node3D" unique_id=862060836 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, -10.5)
-
-[node name="Tile66" parent="Node3D" unique_id=406276677 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, -11.5)
-
-[node name="Tile67" parent="Node3D" unique_id=1399618632 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, -12.5)
-
-[node name="Tile68" parent="Node3D" unique_id=993384092 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, -13.5)
-
-[node name="Tile69" parent="Node3D" unique_id=541022753 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, -14.5)
-
-[node name="Tile70" parent="Node3D" unique_id=1676924869 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -2.5, 1, -14.5)
-
-[node name="Tile71" parent="Node3D" unique_id=1415217359 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -3.5, 1, -14.5)
-
-[node name="Tile72" parent="Node3D" unique_id=2058064482 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -4.5, 1, -14.5)
-
-[node name="Tile73" parent="Node3D" unique_id=753752407 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -5.5, 1, -14.5)
-
-[node name="Tile74" parent="Node3D" unique_id=1598197954 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -6.5, 1, -14.5)
-
-[node name="Tile75" parent="Node3D" unique_id=446737674 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -6.5, 1, -13.5)
-
-[node name="Tile82" parent="Node3D" unique_id=910955572 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -7.5, 1, -13.5)
-
-[node name="Tile76" parent="Node3D" unique_id=460472149 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -7.5, 1, -14.5)
-
-[node name="Tile77" parent="Node3D" unique_id=2130485717 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -8.5, 1, -14.5)
-
-[node name="Tile78" parent="Node3D" unique_id=1887154078 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -9.5, 1, -14.5)
-
-[node name="Tile79" parent="Node3D" unique_id=1787525490 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -10.5, 1, -14.5)
-
-[node name="Tile80" parent="Node3D" unique_id=912673891 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -11.5, 1, -14.5)
-
-[node name="Tile81" parent="Node3D" unique_id=1571838187 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -14.5)
-
-[node name="Tile83" parent="Node3D" unique_id=1212737507 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -13.5)
-
-[node name="Tile84" parent="Node3D" unique_id=355730394 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -12.5)
-
-[node name="Tile85" parent="Node3D" unique_id=27451218 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -11.5)
-
-[node name="Tile86" parent="Node3D" unique_id=563617621 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -10.5)
-
-[node name="Tile87" parent="Node3D" unique_id=1202549231 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -9.5)
-
-[node name="Tile88" parent="Node3D" unique_id=1437281516 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -8.5)
-
-[node name="Tile89" parent="Node3D" unique_id=1755702543 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -7.5)
-
-[node name="Tile91" parent="Node3D" unique_id=1257784663 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -6.5)
-
-[node name="Tile92" parent="Node3D" unique_id=147673607 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -5.5)
-
-[node name="Tile93" parent="Node3D" unique_id=1216079517 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -4.5)
-
-[node name="Tile94" parent="Node3D" unique_id=1700522078 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -3.5)
-
-[node name="Tile95" parent="Node3D" unique_id=783498505 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -2.5)
-
-[node name="Tile96" parent="Node3D" unique_id=286409942 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -1.5)
-
-[node name="Tile97" parent="Node3D" unique_id=1907040607 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -0.5)
-
-[node name="Tile98" parent="Node3D" unique_id=2124645880 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 0.5)
-
-[node name="Tile99" parent="Node3D" unique_id=1996588080 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 1.5)
-
-[node name="Tile100" parent="Node3D" unique_id=378639048 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 2.5)
-
-[node name="Tile101" parent="Node3D" unique_id=1763875019 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 3.5)
-
-[node name="Tile102" parent="Node3D" unique_id=715545873 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 4.5)
-
-[node name="Tile103" parent="Node3D" unique_id=505641041 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 5.5)
-
-[node name="Tile104" parent="Node3D" unique_id=172057523 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 6.5)
-
-[node name="Tile105" parent="Node3D" unique_id=1455383440 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 7.5)
-
-[node name="Tile106" parent="Node3D" unique_id=682347401 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 8.5)
-
-[node name="Tile107" parent="Node3D" unique_id=634097049 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 9.5)
-
-[node name="Tile108" parent="Node3D" unique_id=2114446674 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 10.5)
-
-[node name="Tile109" parent="Node3D" unique_id=432938565 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 11.5)
-
-[node name="Tile110" parent="Node3D" unique_id=759838693 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 12.5)
-
-[node name="Tile111" parent="Node3D" unique_id=1594382244 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 13.5)
-
-[node name="Tile112" parent="Node3D" unique_id=205271887 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 14.5)
-
-[node name="Tile113" parent="Node3D" unique_id=47949438 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -11.5, 1, 14.5)
-
-[node name="Tile114" parent="Node3D" unique_id=1526472556 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -10.5, 1, 14.5)
-
-[node name="Tile115" parent="Node3D" unique_id=1280998549 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -9.5, 1, 14.5)
-
-[node name="Tile116" parent="Node3D" unique_id=592376089 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -8.5, 1, 14.5)
-
-[node name="Tile117" parent="Node3D" unique_id=1285441017 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -7.5, 1, 14.5)
-
-[node name="Tile118" parent="Node3D" unique_id=772712324 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -6.5, 1, 14.5)
-
-[node name="Tile119" parent="Node3D" unique_id=1742112000 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -6.5, 1, 13.5)
-
-[node name="Tile120" parent="Node3D" unique_id=1913646425 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -7.5, 1, 13.5)
-
-[node name="Tile121" parent="Node3D" unique_id=801801074 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -5.5, 1, 14.5)
-
-[node name="Tile122" parent="Node3D" unique_id=379080166 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -4.5, 1, 14.5)
-
-[node name="Tile123" parent="Node3D" unique_id=1026443181 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -3.5, 1, 14.5)
-
-[node name="Tile124" parent="Node3D" unique_id=985943328 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -2.5, 1, 14.5)
-
-[node name="Tile125" parent="Node3D" unique_id=1471140329 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, 14.5)
-
-[node name="Tile126" parent="Node3D" unique_id=641696934 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, 13.5)
-
-[node name="Tile127" parent="Node3D" unique_id=1840607319 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, 12.5)
-
-[node name="Tile128" parent="Node3D" unique_id=1221969966 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, 11.5)
-
-[node name="Tile129" parent="Node3D" unique_id=198051711 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, 10.5)
-
-[node name="Tile130" parent="Node3D" unique_id=1822172894 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, 9.5)
-
-[node name="Tile131" parent="Node3D" unique_id=83454932 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -0.5, 1, 9.5)
-
-[node name="Tile132" parent="Node3D" unique_id=2012386249 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 0.5, 1, 9.5)
-
-[node name="Tile133" parent="Node3D" unique_id=1924620579 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 1.5, 1, 9.5)
-
-[node name="Tile134" parent="Node3D" unique_id=1915629595 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, 10.5)
-
-[node name="Tile135" parent="Node3D" unique_id=1643530614 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, 11.5)
-
-[node name="Tile136" parent="Node3D" unique_id=1454174061 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, 12.5)
-
-[node name="Tile137" parent="Node3D" unique_id=1059417169 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, 13.5)
-
-[node name="Tile138" parent="Node3D" unique_id=2137498058 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, 14.5)
-
-[node name="Tile139" parent="Node3D" unique_id=1567603805 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, 14.5)
-
-[node name="Tile140" parent="Node3D" unique_id=465675607 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, 13.5)
-
-[node name="Tile141" parent="Node3D" unique_id=882506394 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, 12.5)
-
-[node name="Tile142" parent="Node3D" unique_id=1578492328 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, 11.5)
-
-[node name="Tile143" parent="Node3D" unique_id=997279954 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, 10.5)
-
-[node name="Tile144" parent="Node3D" unique_id=1074102109 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, 9.5)
-
-[node name="Tile145" parent="Node3D" unique_id=1260738300 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, 9.5)
-
-[node name="Tile146" parent="Node3D" unique_id=2088721675 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 5.5, 1, 9.5)
-
-[node name="Tile147" parent="Node3D" unique_id=1971258076 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 6.5, 1, 9.5)
-
-[node name="Tile148" parent="Node3D" unique_id=773312478 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 7.5, 1, 9.5)
-
-[node name="Tile149" parent="Node3D" unique_id=816300919 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, 9.5)
-
-[node name="Tile150" parent="Node3D" unique_id=1049907577 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, 10.5)
-
-[node name="Tile151" parent="Node3D" unique_id=1250263000 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, 11.5)
-
-[node name="Tile152" parent="Node3D" unique_id=585087275 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, 12.5)
-
-[node name="Tile153" parent="Node3D" unique_id=1404413811 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, 12.5)
-
-[node name="Tile154" parent="Node3D" unique_id=2061932023 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, 13.5)
-
-[node name="Tile155" parent="Node3D" unique_id=601187181 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, 14.5)
-
-[node name="Tile156" parent="Node3D" unique_id=927764960 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 9.5, 1, 14.5)
-
-[node name="Tile157" parent="Node3D" unique_id=1300689426 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 10.5, 1, 14.5)
-
-[node name="Tile158" parent="Node3D" unique_id=884937676 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 11.5, 1, 14.5)
-
-[node name="Tile159" parent="Node3D" unique_id=89943795 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 12.5, 1, 14.5)
-
-[node name="Tile160" parent="Node3D" unique_id=379933458 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, 14.5)
-
-[node name="Tile161" parent="Node3D" unique_id=893659940 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 14.5, 1, 14.5)
-
-[node name="Tile162" parent="Node3D" unique_id=1039453647 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, 14.5)
-
-[node name="Tile163" parent="Node3D" unique_id=895354866 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 16.5, 1, 14.5)
-
-[node name="Tile54" parent="Node3D" unique_id=297371024 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, -13.5)
-
-[node name="Tile2" parent="Node3D" unique_id=586886570 instance=ExtResource("2_bo1nx")]
+[node name="Tile" parent="Tilemap" unique_id=460691535 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 1.5)
 
-[node name="Tile3" parent="Node3D" unique_id=1826198826 instance=ExtResource("2_bo1nx")]
+[node name="Tile16" parent="Tilemap" unique_id=1385455867 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 0.5)
+
+[node name="Tile17" parent="Tilemap" unique_id=2044901697 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -0.5)
+
+[node name="Tile185" parent="Tilemap" unique_id=774632252 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 16.5, 1, -0.5)
+
+[node name="Tile186" parent="Tilemap" unique_id=1142312620 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, -0.5)
+
+[node name="Tile187" parent="Tilemap" unique_id=124203628 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 14.5, 1, -0.5)
+
+[node name="Tile188" parent="Tilemap" unique_id=1857222016 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, -0.5)
+
+[node name="Tile189" parent="Tilemap" unique_id=1624516135 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, 0.5)
+
+[node name="Tile193" parent="Tilemap" unique_id=579270569 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, 2.5)
+
+[node name="Tile194" parent="Tilemap" unique_id=1686966589 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 14.5, 1, 2.5)
+
+[node name="Tile195" parent="Tilemap" unique_id=593685109 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, 2.5)
+
+[node name="Tile196" parent="Tilemap" unique_id=1793057340 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, 3.5)
+
+[node name="Tile197" parent="Tilemap" unique_id=1634323327 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, 4.5)
+
+[node name="Tile198" parent="Tilemap" unique_id=1344636488 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, 5.5)
+
+[node name="Tile199" parent="Tilemap" unique_id=1257016196 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, 5.5)
+
+[node name="Tile200" parent="Tilemap" unique_id=816852794 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, 6.5)
+
+[node name="Tile201" parent="Tilemap" unique_id=416866910 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 14.5, 1, 6.5)
+
+[node name="Tile202" parent="Tilemap" unique_id=430974224 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, 6.5)
+
+[node name="Tile203" parent="Tilemap" unique_id=559614670 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, 5.5)
+
+[node name="Tile204" parent="Tilemap" unique_id=1700644240 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, 4.5)
+
+[node name="Tile205" parent="Tilemap" unique_id=639036592 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, 3.5)
+
+[node name="Tile206" parent="Tilemap" unique_id=752693611 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, 8.5)
+
+[node name="Tile207" parent="Tilemap" unique_id=1750615340 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 14.5, 1, 8.5)
+
+[node name="Tile208" parent="Tilemap" unique_id=1585745231 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, 8.5)
+
+[node name="Tile209" parent="Tilemap" unique_id=2007622136 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, 9.5)
+
+[node name="Tile210" parent="Tilemap" unique_id=1630060117 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, 10.5)
+
+[node name="Tile211" parent="Tilemap" unique_id=302310999 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, 11.5)
+
+[node name="Tile212" parent="Tilemap" unique_id=1682547306 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 14.5, 1, 11.5)
+
+[node name="Tile213" parent="Tilemap" unique_id=914634134 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, 11.5)
+
+[node name="Tile216" parent="Tilemap" unique_id=2075835246 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 11.5, 1, 11.5)
+
+[node name="Tile217" parent="Tilemap" unique_id=1840276385 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 10.5, 1, 11.5)
+
+[node name="Tile218" parent="Tilemap" unique_id=1791791609 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 10.5, 1, 10.5)
+
+[node name="Tile219" parent="Tilemap" unique_id=1633955094 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 10.5, 1, 9.5)
+
+[node name="Tile220" parent="Tilemap" unique_id=193726755 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 10.5, 1, 8.5)
+
+[node name="Tile221" parent="Tilemap" unique_id=525988058 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 11.5, 1, 8.5)
+
+[node name="Tile222" parent="Tilemap" unique_id=188409549 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 11.5, 1, 9.5)
+
+[node name="Tile223" parent="Tilemap" unique_id=340536142 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 11.5, 1, 10.5)
+
+[node name="Tile214" parent="Tilemap" unique_id=11324265 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, 10.5)
+
+[node name="Tile215" parent="Tilemap" unique_id=495690350 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, 9.5)
+
+[node name="Tile190" parent="Tilemap" unique_id=1203812509 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 14.5, 1, 0.5)
+
+[node name="Tile191" parent="Tilemap" unique_id=721622361 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, 0.5)
+
+[node name="Tile192" parent="Tilemap" unique_id=607895521 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 16.5, 1, 0.5)
+
+[node name="Tile18" parent="Tilemap" unique_id=2023419306 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -1.5)
+
+[node name="Tile19" parent="Tilemap" unique_id=610489325 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -2.5)
+
+[node name="Tile20" parent="Tilemap" unique_id=807483625 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -3.5)
+
+[node name="Tile21" parent="Tilemap" unique_id=1026137088 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -4.5)
+
+[node name="Tile22" parent="Tilemap" unique_id=279175810 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -5.5)
+
+[node name="Tile23" parent="Tilemap" unique_id=803247545 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -6.5)
+
+[node name="Tile24" parent="Tilemap" unique_id=331212451 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -7.5)
+
+[node name="Tile25" parent="Tilemap" unique_id=1476871569 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -8.5)
+
+[node name="Tile26" parent="Tilemap" unique_id=433442663 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -9.5)
+
+[node name="Tile27" parent="Tilemap" unique_id=448343630 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -10.5)
+
+[node name="Tile28" parent="Tilemap" unique_id=1967342296 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -12.5)
+
+[node name="Tile29" parent="Tilemap" unique_id=1110320456 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -11.5)
+
+[node name="Tile31" parent="Tilemap" unique_id=959713467 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, -11.5)
+
+[node name="Tile90" parent="Tilemap" unique_id=341823131 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, -10.5)
+
+[node name="Tile164" parent="Tilemap" unique_id=1168226276 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, -9.5)
+
+[node name="Tile165" parent="Tilemap" unique_id=1541133465 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, -8.5)
+
+[node name="Tile166" parent="Tilemap" unique_id=2029610855 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 14.5, 1, -8.5)
+
+[node name="Tile167" parent="Tilemap" unique_id=382260293 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, -8.5)
+
+[node name="Tile224" parent="Tilemap" unique_id=1449020742 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 11.5, 1, -8.500001)
+
+[node name="Tile225" parent="Tilemap" unique_id=741447256 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 11.500001, 1, -9.500002)
+
+[node name="Tile226" parent="Tilemap" unique_id=1378978114 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 11.500002, 1, -10.500003)
+
+[node name="Tile227" parent="Tilemap" unique_id=1391711310 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 11.500003, 1, -11.500004)
+
+[node name="Tile228" parent="Tilemap" unique_id=645170508 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 10.500002, 1, -11.500005)
+
+[node name="Tile229" parent="Tilemap" unique_id=1362857536 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 10.500002, 1, -10.500005)
+
+[node name="Tile230" parent="Tilemap" unique_id=1801281175 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 10.500002, 1, -9.500005)
+
+[node name="Tile231" parent="Tilemap" unique_id=969361586 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 10.500002, 1, -8.500005)
+
+[node name="Tile168" parent="Tilemap" unique_id=621913469 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, -9.5)
+
+[node name="Tile169" parent="Tilemap" unique_id=1859813764 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, -10.5)
+
+[node name="Tile170" parent="Tilemap" unique_id=20478070 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, -11.5)
+
+[node name="Tile171" parent="Tilemap" unique_id=1994151832 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 14.5, 1, -11.5)
+
+[node name="Tile172" parent="Tilemap" unique_id=692268116 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 14.5, 1, -6.5)
+
+[node name="Tile173" parent="Tilemap" unique_id=1347434819 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, -6.5)
+
+[node name="Tile174" parent="Tilemap" unique_id=830332688 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, -5.5)
+
+[node name="Tile175" parent="Tilemap" unique_id=1802923937 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, -4.5)
+
+[node name="Tile176" parent="Tilemap" unique_id=1444876230 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, -3.5)
+
+[node name="Tile177" parent="Tilemap" unique_id=938800976 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, -2.5)
+
+[node name="Tile178" parent="Tilemap" unique_id=1143357991 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 14.5, 1, -2.5)
+
+[node name="Tile179" parent="Tilemap" unique_id=317151530 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, -2.5)
+
+[node name="Tile180" parent="Tilemap" unique_id=1771273119 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, -3.5)
+
+[node name="Tile181" parent="Tilemap" unique_id=1395644968 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, -4.5)
+
+[node name="Tile182" parent="Tilemap" unique_id=1910160073 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, -5.5)
+
+[node name="Tile183" parent="Tilemap" unique_id=2057689885 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, -6.5)
+
+[node name="Tile184" parent="Tilemap" unique_id=1651704656 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, -6.5)
+
+[node name="Tile30" parent="Tilemap" unique_id=293316065 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, -13.5)
+
+[node name="Tile32" parent="Tilemap" unique_id=1741872551 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 16.5, 1, -13.5)
+
+[node name="Tile33" parent="Tilemap" unique_id=2055152821 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, -13.5)
+
+[node name="Tile34" parent="Tilemap" unique_id=968327887 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 14.5, 1, -13.5)
+
+[node name="Tile35" parent="Tilemap" unique_id=98122168 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, -13.5)
+
+[node name="Tile36" parent="Tilemap" unique_id=1107626070 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 12.5, 1, -13.5)
+
+[node name="Tile37" parent="Tilemap" unique_id=822721048 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 11.5, 1, -13.5)
+
+[node name="Tile38" parent="Tilemap" unique_id=2060134490 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 10.5, 1, -13.5)
+
+[node name="Tile39" parent="Tilemap" unique_id=1455151441 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 9.5, 1, -13.5)
+
+[node name="Tile40" parent="Tilemap" unique_id=551700588 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, -13.5)
+
+[node name="Tile41" parent="Tilemap" unique_id=354635711 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, -12.5)
+
+[node name="Tile42" parent="Tilemap" unique_id=1183501653 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, -11.5)
+
+[node name="Tile43" parent="Tilemap" unique_id=1326583136 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, -10.5)
+
+[node name="Tile44" parent="Tilemap" unique_id=1938288317 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, -9.5)
+
+[node name="Tile45" parent="Tilemap" unique_id=1370147492 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, -8.5)
+
+[node name="Tile46" parent="Tilemap" unique_id=307886283 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 7.5, 1, -8.5)
+
+[node name="Tile47" parent="Tilemap" unique_id=352192107 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 6.5, 1, -8.5)
+
+[node name="Tile48" parent="Tilemap" unique_id=1553349478 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, -8.5)
+
+[node name="Tile49" parent="Tilemap" unique_id=704334267 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 5.5, 1, -8.5)
+
+[node name="Tile50" parent="Tilemap" unique_id=1515743543 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, -9.5)
+
+[node name="Tile51" parent="Tilemap" unique_id=825014469 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, -10.5)
+
+[node name="Tile52" parent="Tilemap" unique_id=957662236 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, -11.5)
+
+[node name="Tile53" parent="Tilemap" unique_id=362529452 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, -13.5)
+
+[node name="Tile55" parent="Tilemap" unique_id=1917722705 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, -13.5)
+
+[node name="Tile56" parent="Tilemap" unique_id=1344731012 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, -12.5)
+
+[node name="Tile57" parent="Tilemap" unique_id=1086632303 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, -11.5)
+
+[node name="Tile58" parent="Tilemap" unique_id=462049218 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, -10.5)
+
+[node name="Tile59" parent="Tilemap" unique_id=1565130210 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, -9.5)
+
+[node name="Tile60" parent="Tilemap" unique_id=1079258730 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, -8.5)
+
+[node name="Tile61" parent="Tilemap" unique_id=19266128 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 1.5, 1, -8.5)
+
+[node name="Tile62" parent="Tilemap" unique_id=419636965 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 0.5, 1, -8.5)
+
+[node name="Tile63" parent="Tilemap" unique_id=1758479796 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -0.5, 1, -8.5)
+
+[node name="Tile64" parent="Tilemap" unique_id=221918238 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, -8.5)
+
+[node name="Tile65" parent="Tilemap" unique_id=862060836 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, -9.5)
+
+[node name="Tile66" parent="Tilemap" unique_id=406276677 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, -10.5)
+
+[node name="Tile67" parent="Tilemap" unique_id=1399618632 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, -11.5)
+
+[node name="Tile68" parent="Tilemap" unique_id=993384092 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, -12.5)
+
+[node name="Tile69" parent="Tilemap" unique_id=541022753 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, -13.5)
+
+[node name="Tile70" parent="Tilemap" unique_id=1676924869 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -2.5, 1, -13.5)
+
+[node name="Tile71" parent="Tilemap" unique_id=1415217359 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -3.5, 1, -13.5)
+
+[node name="Tile72" parent="Tilemap" unique_id=2058064482 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -4.5, 1, -13.5)
+
+[node name="Tile73" parent="Tilemap" unique_id=753752407 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -5.5, 1, -13.5)
+
+[node name="Tile74" parent="Tilemap" unique_id=1598197954 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -6.5, 1, -13.5)
+
+[node name="Tile75" parent="Tilemap" unique_id=446737674 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -6.5, 1, -12.5)
+
+[node name="Tile82" parent="Tilemap" unique_id=910955572 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -7.5, 1, -12.5)
+
+[node name="Tile76" parent="Tilemap" unique_id=460472149 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -7.5, 1, -13.5)
+
+[node name="Tile77" parent="Tilemap" unique_id=2130485717 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -8.5, 1, -13.5)
+
+[node name="Tile78" parent="Tilemap" unique_id=1887154078 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -9.5, 1, -13.5)
+
+[node name="Tile79" parent="Tilemap" unique_id=1787525490 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -10.5, 1, -13.5)
+
+[node name="Tile80" parent="Tilemap" unique_id=912673891 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -11.5, 1, -13.5)
+
+[node name="Tile81" parent="Tilemap" unique_id=1571838187 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -13.5)
+
+[node name="Tile83" parent="Tilemap" unique_id=1212737507 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -12.5)
+
+[node name="Tile84" parent="Tilemap" unique_id=355730394 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -11.5)
+
+[node name="Tile85" parent="Tilemap" unique_id=27451218 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -10.5)
+
+[node name="Tile86" parent="Tilemap" unique_id=563617621 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -9.5)
+
+[node name="Tile87" parent="Tilemap" unique_id=1202549231 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -8.5)
+
+[node name="Tile88" parent="Tilemap" unique_id=1437281516 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -7.5)
+
+[node name="Tile89" parent="Tilemap" unique_id=1755702543 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -6.5)
+
+[node name="Tile91" parent="Tilemap" unique_id=1257784663 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -5.5)
+
+[node name="Tile92" parent="Tilemap" unique_id=147673607 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -4.5)
+
+[node name="Tile93" parent="Tilemap" unique_id=1216079517 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -3.5)
+
+[node name="Tile94" parent="Tilemap" unique_id=1700522078 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -2.5)
+
+[node name="Tile95" parent="Tilemap" unique_id=783498505 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -1.5)
+
+[node name="Tile96" parent="Tilemap" unique_id=286409942 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, -0.5)
+
+[node name="Tile97" parent="Tilemap" unique_id=1907040607 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 0.5)
+
+[node name="Tile98" parent="Tilemap" unique_id=2124645880 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 1.5)
+
+[node name="Tile99" parent="Tilemap" unique_id=1996588080 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 2.5)
+
+[node name="Tile100" parent="Tilemap" unique_id=378639048 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 3.5)
+
+[node name="Tile101" parent="Tilemap" unique_id=1763875019 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 4.5)
+
+[node name="Tile102" parent="Tilemap" unique_id=715545873 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 5.5)
+
+[node name="Tile103" parent="Tilemap" unique_id=505641041 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 6.5)
+
+[node name="Tile104" parent="Tilemap" unique_id=172057523 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 7.5)
+
+[node name="Tile105" parent="Tilemap" unique_id=1455383440 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 8.5)
+
+[node name="Tile106" parent="Tilemap" unique_id=682347401 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 9.5)
+
+[node name="Tile107" parent="Tilemap" unique_id=634097049 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 10.5)
+
+[node name="Tile108" parent="Tilemap" unique_id=2114446674 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 11.5)
+
+[node name="Tile109" parent="Tilemap" unique_id=432938565 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 12.5)
+
+[node name="Tile110" parent="Tilemap" unique_id=759838693 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -12.5, 1, 13.5)
+
+[node name="Tile113" parent="Tilemap" unique_id=47949438 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -11.5, 1, 13.5)
+
+[node name="Tile114" parent="Tilemap" unique_id=1526472556 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -10.5, 1, 13.5)
+
+[node name="Tile115" parent="Tilemap" unique_id=1280998549 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -9.5, 1, 13.5)
+
+[node name="Tile116" parent="Tilemap" unique_id=592376089 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -8.5, 1, 13.5)
+
+[node name="Tile117" parent="Tilemap" unique_id=1285441017 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -7.5, 1, 13.5)
+
+[node name="Tile118" parent="Tilemap" unique_id=772712324 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -6.5, 1, 13.5)
+
+[node name="Tile119" parent="Tilemap" unique_id=1742112000 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -6.5, 1, 12.5)
+
+[node name="Tile120" parent="Tilemap" unique_id=1913646425 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -7.5, 1, 12.5)
+
+[node name="Tile121" parent="Tilemap" unique_id=801801074 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -5.5, 1, 13.5)
+
+[node name="Tile122" parent="Tilemap" unique_id=379080166 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -4.5, 1, 13.5)
+
+[node name="Tile123" parent="Tilemap" unique_id=1026443181 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -3.5, 1, 13.5)
+
+[node name="Tile124" parent="Tilemap" unique_id=985943328 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -2.5, 1, 13.5)
+
+[node name="Tile125" parent="Tilemap" unique_id=1471140329 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, 13.5)
+
+[node name="Tile126" parent="Tilemap" unique_id=641696934 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, 12.5)
+
+[node name="Tile127" parent="Tilemap" unique_id=1840607319 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, 11.5)
+
+[node name="Tile128" parent="Tilemap" unique_id=1221969966 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, 10.5)
+
+[node name="Tile129" parent="Tilemap" unique_id=198051711 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, 9.5)
+
+[node name="Tile130" parent="Tilemap" unique_id=1822172894 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -1.5, 1, 8.5)
+
+[node name="Tile131" parent="Tilemap" unique_id=83454932 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, -0.5, 1, 8.5)
+
+[node name="Tile132" parent="Tilemap" unique_id=2012386249 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 0.5, 1, 8.5)
+
+[node name="Tile133" parent="Tilemap" unique_id=1924620579 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 1.5, 1, 8.5)
+
+[node name="Tile134" parent="Tilemap" unique_id=1915629595 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, 9.5)
+
+[node name="Tile135" parent="Tilemap" unique_id=1643530614 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, 10.5)
+
+[node name="Tile136" parent="Tilemap" unique_id=1454174061 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, 11.5)
+
+[node name="Tile137" parent="Tilemap" unique_id=1059417169 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, 12.5)
+
+[node name="Tile138" parent="Tilemap" unique_id=2137498058 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, 13.5)
+
+[node name="Tile139" parent="Tilemap" unique_id=1567603805 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, 13.5)
+
+[node name="Tile140" parent="Tilemap" unique_id=465675607 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, 12.5)
+
+[node name="Tile141" parent="Tilemap" unique_id=882506394 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, 11.5)
+
+[node name="Tile142" parent="Tilemap" unique_id=1578492328 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, 10.5)
+
+[node name="Tile143" parent="Tilemap" unique_id=997279954 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, 9.5)
+
+[node name="Tile144" parent="Tilemap" unique_id=1074102109 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 2.5, 1, 8.5)
+
+[node name="Tile145" parent="Tilemap" unique_id=1260738300 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, 8.5)
+
+[node name="Tile146" parent="Tilemap" unique_id=2088721675 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 5.5, 1, 8.5)
+
+[node name="Tile147" parent="Tilemap" unique_id=1971258076 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 6.5, 1, 8.5)
+
+[node name="Tile148" parent="Tilemap" unique_id=773312478 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 7.5, 1, 8.5)
+
+[node name="Tile149" parent="Tilemap" unique_id=816300919 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, 8.5)
+
+[node name="Tile150" parent="Tilemap" unique_id=1049907577 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, 9.5)
+
+[node name="Tile151" parent="Tilemap" unique_id=1250263000 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, 10.5)
+
+[node name="Tile152" parent="Tilemap" unique_id=585087275 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, 11.5)
+
+[node name="Tile153" parent="Tilemap" unique_id=1404413811 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, 11.5)
+
+[node name="Tile154" parent="Tilemap" unique_id=2061932023 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, 12.5)
+
+[node name="Tile155" parent="Tilemap" unique_id=601187181 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 8.5, 1, 13.5)
+
+[node name="Tile156" parent="Tilemap" unique_id=927764960 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 9.5, 1, 13.5)
+
+[node name="Tile157" parent="Tilemap" unique_id=1300689426 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 10.5, 1, 13.5)
+
+[node name="Tile158" parent="Tilemap" unique_id=884937676 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 11.5, 1, 13.5)
+
+[node name="Tile159" parent="Tilemap" unique_id=89943795 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 12.5, 1, 13.5)
+
+[node name="Tile160" parent="Tilemap" unique_id=379933458 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 13.5, 1, 13.5)
+
+[node name="Tile161" parent="Tilemap" unique_id=893659940 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 14.5, 1, 13.5)
+
+[node name="Tile162" parent="Tilemap" unique_id=1039453647 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 15.5, 1, 13.5)
+
+[node name="Tile163" parent="Tilemap" unique_id=895354866 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 16.5, 1, 13.5)
+
+[node name="Tile54" parent="Tilemap" unique_id=297371024 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 4.5, 1, -12.5)
+
+[node name="Tile2" parent="Tilemap" unique_id=586886570 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 2.5)
 
-[node name="Tile4" parent="Node3D" unique_id=472331912 instance=ExtResource("2_bo1nx")]
+[node name="Tile3" parent="Tilemap" unique_id=1826198826 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 3.5)
 
-[node name="Tile5" parent="Node3D" unique_id=1263343095 instance=ExtResource("2_bo1nx")]
+[node name="Tile4" parent="Tilemap" unique_id=472331912 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 4.5)
 
-[node name="Tile6" parent="Node3D" unique_id=1433015580 instance=ExtResource("2_bo1nx")]
+[node name="Tile5" parent="Tilemap" unique_id=1263343095 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 5.5)
 
-[node name="Tile7" parent="Node3D" unique_id=1111302310 instance=ExtResource("2_bo1nx")]
+[node name="Tile6" parent="Tilemap" unique_id=1433015580 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 6.5)
 
-[node name="Tile8" parent="Node3D" unique_id=1210647979 instance=ExtResource("2_bo1nx")]
+[node name="Tile7" parent="Tilemap" unique_id=1111302310 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 7.5)
 
-[node name="Tile9" parent="Node3D" unique_id=953015922 instance=ExtResource("2_bo1nx")]
+[node name="Tile8" parent="Tilemap" unique_id=1210647979 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 8.5)
 
-[node name="Tile10" parent="Node3D" unique_id=1708981192 instance=ExtResource("2_bo1nx")]
+[node name="Tile9" parent="Tilemap" unique_id=953015922 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 9.5)
 
-[node name="Tile11" parent="Node3D" unique_id=1208913202 instance=ExtResource("2_bo1nx")]
+[node name="Tile10" parent="Tilemap" unique_id=1708981192 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 10.5)
 
-[node name="Tile12" parent="Node3D" unique_id=946855692 instance=ExtResource("2_bo1nx")]
+[node name="Tile11" parent="Tilemap" unique_id=1208913202 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 11.5)
 
-[node name="Tile13" parent="Node3D" unique_id=60490981 instance=ExtResource("2_bo1nx")]
+[node name="Tile12" parent="Tilemap" unique_id=946855692 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 12.5)
 
-[node name="Tile14" parent="Node3D" unique_id=370511129 instance=ExtResource("2_bo1nx")]
+[node name="Tile13" parent="Tilemap" unique_id=60490981 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 13.5)
 
-[node name="Tile15" parent="Node3D" unique_id=1277362240 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 14.5)
+[node name="Tile14" parent="Tilemap" unique_id=755121924 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, -3.5527137e-15, 0, 1, 17.5, 1, 13.5)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=120350074]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 21.155, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 22.155, 1)
 
 [node name="Player" parent="." unique_id=481666062 instance=ExtResource("1_jjgbg")]
 transform = Transform3D(0.98, 0, 0, 0, 0.98, 0, 0, 0, 0.98, 0, 1, 0)
