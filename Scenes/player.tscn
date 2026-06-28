@@ -108,12 +108,10 @@ _data = {
 &"mouth": SubResource("Animation_v0iea")
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_v0iea"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_cvnsp"]
-
 [node name="Player" type="CharacterBody3D" unique_id=481666062]
 transform = Transform3D(0.98, 0, 0, 0, 0.98, 0, 0, 0, 0.98, 0, 0, 0)
+collision_layer = 5
+collision_mask = 5
 script = ExtResource("1_v0iea")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1145467940]
@@ -160,19 +158,14 @@ material = SubResource("StandardMaterial3D_vgqql")
 libraries/ = SubResource("AnimationLibrary_cvnsp")
 autoplay = &"mouth"
 
-[node name="Checker" type="Area3D" parent="." unique_id=146638176]
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1029428819]
+target_position = Vector3(1, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Checker" unique_id=1948442077]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1, 0, 0)
-shape = SubResource("BoxShape3D_v0iea")
+[node name="RayCast3D2" type="RayCast3D" parent="." unique_id=1283209054]
+target_position = Vector3(0, 0, 1)
 
-[node name="Checker2" type="Area3D" parent="." unique_id=2050565512]
+[node name="RayCast3D3" type="RayCast3D" parent="." unique_id=775749441]
+target_position = Vector3(0, 0, -1)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Checker2" unique_id=224613992]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1, 0, 0)
-shape = SubResource("BoxShape3D_cvnsp")
-
-[connection signal="body_entered" from="Checker" to="." method="_on_checker_body_entered"]
-[connection signal="body_exited" from="Checker" to="." method="_on_checker_body_exited"]
-[connection signal="body_entered" from="Checker2" to="." method="_on_checker_2_body_entered"]
-[connection signal="body_exited" from="Checker2" to="." method="_on_checker_2_body_exited"]
+[node name="RayCast3D4" type="RayCast3D" parent="." unique_id=1433144256]
+target_position = Vector3(-1, 0, 0)

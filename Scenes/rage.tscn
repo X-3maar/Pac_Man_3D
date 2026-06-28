@@ -10,6 +10,8 @@ roughness = 0.0
 [sub_resource type="SphereShape3D" id="SphereShape3D_t6lb0"]
 
 [node name="Rage" type="Area3D" unique_id=1139464345]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_4p5jq")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=424477306]
