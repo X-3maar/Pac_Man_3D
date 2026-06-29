@@ -3,7 +3,7 @@ extends CharacterBody3D
 @onready var color_rect: ColorRect = $"../CanvasLayer/ColorRect"
 @onready var win: Node3D = $"../Win"
 
-const SPEED = 8
+var SPEED = 8
 @onready var score: CSGMesh3D = $"../Tilemap/CSGMesh3D3"
 @onready var best: CSGMesh3D = $"../Tilemap/CSGMesh3D4"
 var move_left = false
@@ -11,12 +11,20 @@ var move_right = false
 var move_up = false
 var move_down = false
 var paused = false
+var timer = 0
 
 func _physics_process(delta: float) -> void:
 	if Global.count == 262:
 		win.process_mode = PROCESS_MODE_INHERIT
 		win.show()
-		
+	if Global.rage == true:
+		timer += delta
+		SPEED = 10
+		if timer > 7:
+			Global.rage = false
+			SPEED = 8
+			timer = 0
+			
 	if score.mesh is TextMesh:
 		score.mesh.text = str(Global.score)
 	if best.mesh is TextMesh:
