@@ -9,14 +9,14 @@ metallic = 1.0
 roughness = 0.0
 
 [node name="Tile" type="CSGBox3D" unique_id=460691535]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12654269, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16602129, 0)
 use_collision = true
 collision_layer = 9
 collision_mask = 9
-size = Vector3(1, 0.7469146, 1)
+size = Vector3(1, 1.0180997, 1)
 material = SubResource("StandardMaterial3D_y18ax")
 
 [node name="Top" type="CSGBox3D" parent="." unique_id=1702177585]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4402535, 0)
-size = Vector3(1, 0.17633438, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5926845, 0)
+size = Vector3(1, 0.3176005, 1)
 material = SubResource("StandardMaterial3D_xsjyq")

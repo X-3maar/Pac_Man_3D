@@ -8,6 +8,7 @@ func _process(delta: float) -> void:
 	timer += del
 	if timer > 2:
 		get_tree().paused = false
+		Global.started = true
 		queue_free()
 		
 	

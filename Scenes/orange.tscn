@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://qflrc40s86xb"]
 
-[ext_resource type="Script" uid="uid://cowj5mot0o68o" path="res://Scripts/ghost.gd" id="1_n2n7t"]
+[ext_resource type="Script" uid="uid://or1ogvlbbsdg" path="res://Scripts/orange.gd" id="1_n2n7t"]
 [ext_resource type="Script" uid="uid://bgyyu56iftht2" path="res://Scripts/Kill.gd" id="2_andne"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jnnmg"]
@@ -35,6 +35,7 @@ transform = Transform3D(2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, 2.9802322e-08, 0, 0
 script = ExtResource("1_n2n7t")
 
 [node name="Body" type="Node3D" parent="." unique_id=308785141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6138469, 0)
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Body" unique_id=1761081390]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 0.3562398, 0, 8.742278e-08, 0, -1, 0.14770228, 0, 0.00036691676)
@@ -206,10 +207,16 @@ surface_material_override/0 = SubResource("StandardMaterial3D_f0vkv")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1601749742]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11700156, 0, 0)
+collision_layer = 16
+collision_mask = 16
 script = ExtResource("2_andne")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=870413777]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028580606, 0.057678223, 0)
 shape = SubResource("CapsuleShape3D_8a14a")
 
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=526213500]
+path_desired_distance = 0.1
+
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
