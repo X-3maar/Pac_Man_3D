@@ -12,9 +12,10 @@ func _physics_process(delta: float) -> void:
 		timer += delta
 		if timer > 3:
 			block = false
+			start = false
 			timer = 0
 		global_position = Vector3.ZERO
-	else:
+	if !block:
 		if !start :
 			if Global.started:
 				navigation_agent_3d.target_position = pink_2.global_position 

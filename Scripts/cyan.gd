@@ -11,6 +11,7 @@ func _physics_process(delta: float) -> void:
 		timer += delta
 		if timer > 3:
 			block = false
+			start = false
 			timer = 0
 		global_position = Vector3(-1,0,0)
 	else:

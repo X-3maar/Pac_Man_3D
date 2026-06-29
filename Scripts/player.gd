@@ -1,13 +1,18 @@
 extends CharacterBody3D
+@onready var _04_pac_man_turning_the_corner_while_eating_the_pac_dots_1__audio_trimmer_com__2_2: AudioStreamPlayer = $"04_PacManTurningTheCornerWhileEatingThePacDots(1)[audioTrimmer_com](2)2"
 
 @onready var color_rect: ColorRect = $"../CanvasLayer/ColorRect"
 @onready var win: Node3D = $"../Win"
 @onready var color_rect_2: ColorRect = $"../CanvasLayer/ColorRect2"
-
+var count = 0
 var SPEED = 6
 @onready var score: CSGMesh3D = $"../NavigationRegion3D/Tilemap/CSGMesh3D3"
 @onready var best: CSGMesh3D = $"../NavigationRegion3D/Tilemap/CSGMesh3D4"
 var move_left = false
+@onready var pink: CharacterBody3D = $"../Pink"
+@onready var cyan: CharacterBody3D = $"../Cyan"
+@onready var orange: CharacterBody3D = $"../Orange"
+@onready var red: CharacterBody3D = $"../Red"
 var move_right = false
 var move_up = false
 var move_down = false
@@ -16,10 +21,21 @@ var timer = 0
 
 func _physics_process(delta: float) -> void:
 	if Global.lost:
+		_04_pac_man_turning_the_corner_while_eating_the_pac_dots_1__audio_trimmer_com__2_2.stop()
 		color_rect_2.show()
-	if Global.count == 262:
+	if count == 262:
 		win.process_mode = PROCESS_MODE_INHERIT
 		win.show()
+		_04_pac_man_turning_the_corner_while_eating_the_pac_dots_1__audio_trimmer_com__2_2.stop()
+		if red:
+			red.queue_free()
+		if cyan:
+			cyan.queue_free()
+		if orange:
+			orange.queue_free()
+		if pink:
+			pink.queue_free()
+		
 	if Global.rage == true:
 		timer += delta
 		SPEED = 8
@@ -27,7 +43,7 @@ func _physics_process(delta: float) -> void:
 			Global.rage = false
 			SPEED = 6
 			timer = 0
-			
+	
 	if score.mesh is TextMesh:
 		score.mesh.text = str(Global.score)
 	if best.mesh is TextMesh:
@@ -75,11 +91,13 @@ func _physics_process(delta: float) -> void:
 		Engine.time_scale = 0.0
 		color_rect.show()
 		paused = true
+		_04_pac_man_turning_the_corner_while_eating_the_pac_dots_1__audio_trimmer_com__2_2.stop()
 	elif Input.is_action_just_pressed("esc") and paused:
 		Engine.time_scale = 1.0
 		color_rect.hide()
 		paused = false
-	
+		if win.process_mode != win.PROCESS_MODE_INHERIT:
+			_04_pac_man_turning_the_corner_while_eating_the_pac_dots_1__audio_trimmer_com__2_2.play()
 	move_and_slide()
 
 
@@ -100,6 +118,5 @@ func _on_button_2_pressed() -> void:
 	Engine.time_scale = 1.0
 	Global.lost = false
 	Global.score = 0
-	Global.count = 0
 	Global.started = false
 	get_tree().change_scene_to_file("res://Scenes/menu.tscn")

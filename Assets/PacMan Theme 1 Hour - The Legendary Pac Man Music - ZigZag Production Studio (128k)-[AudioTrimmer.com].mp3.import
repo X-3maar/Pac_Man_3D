@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://yxdedb6oub2i"
+path="res://.godot/imported/PacMan Theme 1 Hour - The Legendary Pac Man Music - ZigZag Production Studio (128k)-[AudioTrimmer.com].mp3-0cd83fd0865cce19e7c5f20421423117.mp3str"
+
+[deps]
+
+source_file="res://Assets/PacMan Theme 1 Hour - The Legendary Pac Man Music - ZigZag Production Studio (128k)-[AudioTrimmer.com].mp3"
+dest_files=["res://.godot/imported/PacMan Theme 1 Hour - The Legendary Pac Man Music - ZigZag Production Studio (128k)-[AudioTrimmer.com].mp3-0cd83fd0865cce19e7c5f20421423117.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
