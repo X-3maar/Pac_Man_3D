@@ -37,6 +37,7 @@ wall_min_slide_angle = 0.0
 script = ExtResource("1_13spw")
 
 [node name="Body" type="Node3D" parent="." unique_id=1360059412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6450097, 0)
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Body" unique_id=646745088]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 0.3562398, 0, 8.742278e-08, 0, -1, 0.14770228, 0, 0.00036691676)
@@ -207,11 +208,14 @@ mesh = SubResource("CapsuleMesh_tdrv2")
 surface_material_override/0 = SubResource("StandardMaterial3D_axuqr")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1806409148]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11700156, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11700156, 0.6450097, 0)
 script = ExtResource("1_2qqdy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=130161849]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028580606, 0.057678223, 0)
 shape = SubResource("CapsuleShape3D_rjn5a")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=31950387]
+debug_enabled = true
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

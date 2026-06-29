@@ -4,8 +4,8 @@ extends CharacterBody3D
 @onready var win: Node3D = $"../Win"
 
 var SPEED = 8
-@onready var score: CSGMesh3D = $"../Tilemap/CSGMesh3D3"
-@onready var best: CSGMesh3D = $"../Tilemap/CSGMesh3D4"
+@onready var score: CSGMesh3D = $"../NavigationRegion3D/Tilemap/CSGMesh3D3"
+@onready var best: CSGMesh3D = $"../NavigationRegion3D/Tilemap/CSGMesh3D4"
 var move_left = false
 var move_right = false
 var move_up = false
