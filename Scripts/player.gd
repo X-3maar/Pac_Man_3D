@@ -2,8 +2,9 @@ extends CharacterBody3D
 
 @onready var color_rect: ColorRect = $"../CanvasLayer/ColorRect"
 @onready var win: Node3D = $"../Win"
+@onready var color_rect_2: ColorRect = $"../CanvasLayer/ColorRect2"
 
-var SPEED = 8
+var SPEED = 6
 @onready var score: CSGMesh3D = $"../NavigationRegion3D/Tilemap/CSGMesh3D3"
 @onready var best: CSGMesh3D = $"../NavigationRegion3D/Tilemap/CSGMesh3D4"
 var move_left = false
@@ -14,15 +15,17 @@ var paused = false
 var timer = 0
 
 func _physics_process(delta: float) -> void:
+	if Global.lost:
+		color_rect_2.show()
 	if Global.count == 262:
 		win.process_mode = PROCESS_MODE_INHERIT
 		win.show()
 	if Global.rage == true:
 		timer += delta
-		SPEED = 10
+		SPEED = 8
 		if timer > 7:
 			Global.rage = false
-			SPEED = 8
+			SPEED = 6
 			timer = 0
 			
 	if score.mesh is TextMesh:
@@ -31,25 +34,25 @@ func _physics_process(delta: float) -> void:
 		best.mesh.text = str(Global.best)
 	if Global.best < Global.score:
 		Global.best = Global.score
-	if Input.is_action_just_pressed("move_left") and !test_move(global_transform,Vector3.LEFT) :
+	if Input.is_action_just_pressed("move_left"):
 		move_left = true
 		move_up = false
 		move_down = false
 		move_right = false
 		velocity.z= 0
-	if Input.is_action_just_pressed("move_right") and !test_move(global_transform,Vector3.RIGHT):
+	if Input.is_action_just_pressed("move_right"):
 		velocity.z = 0
 		move_right = true
 		move_left = false
 		move_down = false
 		move_up = false
-	if Input.is_action_just_pressed("move_up") and !test_move(global_transform,Vector3.FORWARD):
+	if Input.is_action_just_pressed("move_up"):
 		velocity.x = 0
 		move_up = true
 		move_left = false
 		move_right = false
 		move_down = false
-	if Input.is_action_just_pressed("move_down") and !test_move(global_transform,Vector3.BACK):
+	if Input.is_action_just_pressed("move_down"):
 		move_down = true
 		move_left = false
 		move_right = false
@@ -90,10 +93,12 @@ func _on_button_3_pressed() -> void:
 	Engine.time_scale = 1.0
 	Global.score = 0
 	Global.started = false
+	Global.lost = false
 	get_tree().reload_current_scene()
 
 func _on_button_2_pressed() -> void:
 	Engine.time_scale = 1.0
+	Global.lost = false
 	Global.score = 0
 	Global.count = 0
 	Global.started = false

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://di8lbxakayb88" path="res://Scenes/gate.tscn" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://beg7vh00ervue" path="res://Scenes/tile.tscn" id="2_bo1nx"]
 [ext_resource type="FontFile" uid="uid://cw0xdqkuguu7m" path="res://Assets/BlackOpsOne-Regular.ttf" id="3_21xkr"]
+[ext_resource type="StyleBox" uid="uid://de5o0h280abkv" path="res://Assets/play_button.tres" id="3_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://b4wbgda8f1edv" path="res://Scenes/point.tscn" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://de3mkxce38jw1" path="res://Scenes/rage.tscn" id="6_6bp64"]
 [ext_resource type="PackedScene" uid="uid://p8r0jnf5qhx" path="res://Scenes/portal.tscn" id="7_6bp64"]
@@ -161,6 +162,8 @@ offset_right = 122.0
 offset_bottom = 86.75
 grow_horizontal = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_6bp64")
+theme_override_styles/pressed = ExtResource("3_jkdf5")
+theme_override_styles/hover = ExtResource("3_jkdf5")
 
 [node name="Label" type="Label" parent="CanvasLayer/ColorRect/ColorRect/ColorRect2/Button" unique_id=1068171529]
 layout_mode = 1
@@ -193,6 +196,8 @@ offset_bottom = 30.875
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_6bp64")
+theme_override_styles/pressed = ExtResource("3_jkdf5")
+theme_override_styles/hover = ExtResource("3_jkdf5")
 
 [node name="Label" type="Label" parent="CanvasLayer/ColorRect/ColorRect/ColorRect2/Button3" unique_id=1601022529]
 layout_mode = 1
@@ -225,6 +230,8 @@ offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_6bp64")
+theme_override_styles/pressed = ExtResource("3_jkdf5")
+theme_override_styles/hover = ExtResource("3_jkdf5")
 
 [node name="Label" type="Label" parent="CanvasLayer/ColorRect/ColorRect/ColorRect2/Button2" unique_id=1939278331]
 layout_mode = 1
@@ -242,6 +249,128 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_21xkr")
 theme_override_font_sizes/font_size = 32
 text = "Quit"
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=2057227153]
+visible = false
+offset_right = 1161.0
+offset_bottom = 665.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/ColorRect2" unique_id=1825876060]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -158.5
+offset_top = -129.0
+offset_right = 158.5
+offset_bottom = 129.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/ColorRect2/ColorRect" unique_id=65823136]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -123.25
+offset_right = 152.0
+offset_bottom = 123.25
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Button3" type="Button" parent="CanvasLayer/ColorRect2/ColorRect/ColorRect2" unique_id=1779409425]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = -30.875
+offset_right = 122.0
+offset_bottom = 30.875
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_6bp64")
+theme_override_styles/pressed = ExtResource("3_jkdf5")
+theme_override_styles/hover = ExtResource("3_jkdf5")
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect2/ColorRect/ColorRect2/Button3" unique_id=1283832249]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.5
+offset_top = -20.5
+offset_right = 49.5
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_21xkr")
+theme_override_font_sizes/font_size = 32
+text = "Reset"
+
+[node name="Button2" type="Button" parent="CanvasLayer/ColorRect2/ColorRect/ColorRect2" unique_id=1650635047]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -122.0
+offset_top = -85.75
+offset_right = 122.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_6bp64")
+theme_override_styles/pressed = ExtResource("3_jkdf5")
+theme_override_styles/hover = ExtResource("3_jkdf5")
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect2/ColorRect/ColorRect2/Button2" unique_id=1689724419]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.5
+offset_top = -20.5
+offset_right = 34.5
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_21xkr")
+theme_override_font_sizes/font_size = 32
+text = "Quit"
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect2/ColorRect/ColorRect2" unique_id=506118958]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.5
+offset_top = -101.5
+offset_right = 49.5
+offset_bottom = -60.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7490196, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_21xkr")
+theme_override_font_sizes/font_size = 50
+text = "You Lost"
 
 [node name="Ready" type="CSGMesh3D" parent="." unique_id=2060574541]
 process_mode = 3
@@ -2635,7 +2764,7 @@ transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08
 transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 0, 0.5, -3.0906935)
 
 [node name="Red2" type="Marker3D" parent="." unique_id=906901903]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.423605, 1.1875448, -12.727949)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.576044, 1.1875448, -12.9119)
 
 [node name="Orange2" type="Marker3D" parent="." unique_id=102698438]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107733965, 1.1875448, -9.173417)
@@ -2649,3 +2778,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4418926, 1.1875448, 11.713
 [connection signal="pressed" from="CanvasLayer/ColorRect/ColorRect/ColorRect2/Button" to="Player" method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/ColorRect/ColorRect2/Button3" to="Player" method="_on_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/ColorRect/ColorRect/ColorRect2/Button2" to="Player" method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect2/ColorRect/ColorRect2/Button3" to="Player" method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect2/ColorRect/ColorRect2/Button2" to="Player" method="_on_button_2_pressed"]
